@@ -84,6 +84,11 @@ ul li a>img {
 }
 
 
+/* ul li a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.521);
+} */
+
+
 /* nav bar end  */
 
 
@@ -159,9 +164,6 @@ main {
     margin: 40px auto;
 }
 
-
-/* menu container icon  */
-
 .popular-collection-card {
     max-width: 300px;
     padding: 10px;
@@ -170,8 +172,19 @@ main {
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
 }
 
+.more-itame {
+    color: rgba(224, 44, 109, 0.87);
+    ;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    margin-right: 70px;
+}
+
 .menu-container {
     display: inline-block;
+    cursor: pointer;
 }
 
 .menu-1 {
@@ -186,14 +199,14 @@ main {
     height: 3px;
     background-color: var(--primary-color);
     margin-bottom: 4px;
-    transition: width .7s;
+    transition: width .3s;
 }
 
 .menu-3 {
     width: 15px;
     height: 3px;
     background-color: var(--primary-color);
-    transition: width .9s;
+    transition: width .4s linear .1s;
 }
 
 .menu-container:hover .menu-2 {
@@ -202,6 +215,57 @@ main {
 
 .menu-container:hover .menu-3 {
     width: 40px;
+}
+
+.featured-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 20px;
+}
+
+.fetured-titel {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.featured-para {
+    max-width: 500px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background: #0A0826;
+}
+
+.footer-info {
+    color: white;
+    text-align: center;
+}
+
+.footer-titel {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-info h5 {
+    margin-bottom: 5px;
+}
+
+.footer-icon {
+    margin: 10px 0px;
+}
+
+.footer-icon i {
+    margin: 0px 10px;
+}
+
+.footer-icon i:hover {
+    color: red;
+    cursor: pointer;
 }
 
 @media screen and (max-width:576px) {
@@ -232,6 +296,9 @@ main {
     .banner-image {
         width: 90%;
     }
+    .banner-image img {
+        width: 90%;
+    }
     .banner-titel {
         font-size: 1.6rem;
     }
@@ -258,5 +325,23 @@ main {
     }
     .popular-collection-card {
         margin: 0 auto;
+    }
+    .more-itame {
+        margin-right: 30px;
+    }
+    .featured-product {
+        flex-direction: column-reverse;
+        margin: 10px;
+    }
+    .featured-details {
+        text-align: center;
+        padding: 5px;
+    }
+    .featured-image {
+        width: 85%;
+        margin-bottom: 20px;
+    }
+    .featured-image img {
+        width: 100%;
     }
 }
