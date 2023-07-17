@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #3A3A3A;
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+.primary-text {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.primary-button {
+    color: #fff;
+    padding: 8px 16px;
+    background-color: #E02C6D;
+    border: 0;
+    border-radius: 40px;
+}
+
+.btn-container {
+    display: flex;
+    gap: 5px;
+}
+
+
+/* nav bar style  */
+
+header {
+    padding: 40px 120px;
+}
+
+.mobail-menu {
+    display: none;
+}
+
+.nav-titel {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
+}
+
+ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+ul li a {
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary-color)
+}
+
+ul li a i {
+    font-size: 1rem;
+}
+
+ul li a>img {
+    width: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* nav bar end  */
+
+
+/* banner style    */
+
+.banner-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.banner-text {
+    max-width: 528px;
+}
+
+.banner-titel {
+    color: var(--primary-color);
+    font-size: 3.2rem;
+}
+
+.banner-image {
+    max-width: 380px;
+    max-height: 380px;
+    background-image: url("./images/Circle\ design.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.banner-image img {
+    width: 100%;
+}
+
+
+/* main section style  */
+
+main {
+    width: 1144px;
+    margin: 20px auto;
+}
+
+.brand-container {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid rgba(128, 121, 121, 0.541);
+    margin: 5px 30px;
+}
+
+
+/* popular collection style  */
+
+.popular {
+    margin: 50px 0;
+}
+
+.popular-titel {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.popular-collection-container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 40px auto;
+}
+
+
+/* menu container icon  */
+
+.popular-collection-card {
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.menu-container {
+    display: inline-block;
+}
+
+.menu-1 {
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.menu-2 {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin-bottom: 4px;
+    transition: width .7s;
+}
+
+.menu-3 {
+    width: 15px;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: width .9s;
+}
+
+.menu-container:hover .menu-2 {
+    width: 40px;
+}
+
+.menu-container:hover .menu-3 {
+    width: 40px;
+}
+
+@media screen and (max-width:576px) {
+    header {
+        padding: 50px 20px;
+    }
+    main {
+        width: 100%;
+    }
+    .nav-container {
+        display: none;
+    }
+    .mobail-menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav-titel-2 {
+        font-size: 1.3rem;
+    }
+    .banner-container {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .banner-text {
+        text-align: center;
+    }
+    .banner-image {
+        width: 90%;
+    }
+    .banner-titel {
+        font-size: 1.6rem;
+    }
+    .btn-container {
+        text-align: center;
+        margin: 20px auto;
+    }
+    .brand-container {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-evenly;
+        padding: 20px 5px;
+        border: none;
+    }
+    .brand-container img {
+        width: 80%;
+    }
+    .popular-collection-container {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    .popular-collection-card {
+        margin: 0 auto;
+    }
+}
